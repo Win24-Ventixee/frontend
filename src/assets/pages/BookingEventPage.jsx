@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 
 const BookingEventPage = () => {
+  const navigate = useNavigate()
   const { id } = useParams()
   const [event, setEvent] = useState({})
   const [formData, setFormData] = useState({ 
@@ -41,19 +42,20 @@ const BookingEventPage = () => {
     e.preventDefault()
   
     try {
-    const res = await fetch(`https://bookingservicee-e3eyadf3bhetf6g0.swedencentral-01.azurewebsites.net/api/Bookings`, {
+    const res = await fetch(`https://bookingservicee-e3eyadf3bhetf6g0.swedencentral-01.azurewebsites.net/api/bookings`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
+      headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(formData)
     })
 
     if (!res.ok) {
       console.error("Booking failed")
+      alert("Booking failed")
     }
     else {
+      alert("Booking success")
       console.log("Booking successful")
+      navigate('/')
     }
     }
     catch (err) {
