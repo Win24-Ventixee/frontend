@@ -1,0 +1,6 @@
+{
+  "navigationFallback" : {
+    "rewrite" : "/index.hmtl",
+    "exclude" : ["/api/*", "/static/*", "/assets/*"]
+  }
+}
