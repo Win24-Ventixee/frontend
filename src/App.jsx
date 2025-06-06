@@ -3,15 +3,22 @@ import './App.css'
 import EventPage from './assets/pages/EventPage'
 import EventDetailsPage from './assets/pages/EventDetailsPage'
 import BookingEventPage from './assets/pages/BookingEventPage'
+import CenterLayout from './assets/layouts/CenterLayout'
+import PortalLayout from './assets/layouts/PortalLayout'
 
 function App() {
 
   return (
     <>
       <Routes>
-        <Route path="/" element={<EventPage />} />
-        <Route path="/events/:id" element={<EventDetailsPage/>} />
-        <Route path="/events/booking/:id" element={<BookingEventPage />} />
+        <Route element={<PortalLayout />}>
+          <Route path="/" element={<EventPage />} />
+        </Route>
+
+        <Route element={<CenterLayout />}>
+          <Route path="/events/:id" element={<EventDetailsPage/>} />
+          <Route path="/events/booking/:id" element={<BookingEventPage />} />
+        </Route>
       </Routes>
     </>
   )

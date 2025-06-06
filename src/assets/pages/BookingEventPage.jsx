@@ -65,32 +65,32 @@ const BookingEventPage = () => {
 
 
   return (
-    <div>
+    <div className="bookings">
       <h1>Book Event - {event.title}</h1>
-      <div>
-        <form onSubmit={handleSubmit} noValidate>
-          <div>
-            <label>First Name</label>
+      <div className="formz">
+        <form className="form" onSubmit={handleSubmit} noValidate>
+          <div className="label">
+            <label>First Name: </label>
             <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required />
           </div>
-          <div>
-            <label>Last Name</label>
+          <div className="label">
+            <label>Last Name: </label>
             <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required/>
           </div>
-          <div>
-            <label>E-mail</label>
+          <div className="label">
+            <label>E-mail: </label>
             <input type="email" name="email" value={formData.email} onChange={handleChange} required/>
           </div>
-          <div>
-            <label>Street Name</label>
+          <div className="label">
+            <label>Street Name: </label>
             <input type="text" name="streetName" value={formData.streetName} onChange={handleChange} required />
           </div>
-          <div>
-            <label>Postal Code</label>
+          <div className="label">
+            <label>Postal Code: </label>
             <input type="text" name="postalCode" value={formData.postalCode} onChange={handleChange} required />
           </div>
-          <div>
-            <label>City</label>
+          <div className="label">
+            <label>City: </label>
             <input type="text" name="city" value={formData.city} onChange={handleChange} required/>
           </div>
           <button type="submit">Book Now</button>

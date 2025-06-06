@@ -19,7 +19,7 @@ const EventList = () => {
   }, [])
 
   return (
-    <section id="events">
+    <section id="events-id">
       {
         events.map(event => (<EventItem key={event.id} item={event} />))
       }
