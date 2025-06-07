@@ -7,7 +7,7 @@ const EventItem = ({item}) => {
       <div className="date-loc-desc">{item.eventDate} {item.location}</div>
       <div className="date-loc-desc">{item.description}</div>
       <Link to={`/events/${item.id}`}>
-        <div className="event-details">Event Details</div>
+        <div className="event-details">Evenanemangsdetaljer</div>
       </Link>
    </div>
   )

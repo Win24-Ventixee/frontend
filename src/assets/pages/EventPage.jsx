@@ -6,12 +6,12 @@ import EventList from "../components/EventList"
 const EventPage = () => {
   return (
     <>
-      <Nav />
-      <Header />
+      {/* <Nav />
+      <Header /> */}
       <main>
         <EventList />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }
