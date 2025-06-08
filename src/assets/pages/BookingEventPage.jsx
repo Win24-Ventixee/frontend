@@ -70,30 +70,30 @@ const BookingEventPage = () => {
       <div className="formz">
         <form className="form" onSubmit={handleSubmit} noValidate>
           <div className="label">
-            <label>First Name: </label>
+            <label>Förnamn: </label>
             <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required />
           </div>
           <div className="label">
-            <label>Last Name: </label>
+            <label>Efternamn: </label>
             <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required/>
           </div>
           <div className="label">
-            <label>E-mail: </label>
+            <label>Epost: </label>
             <input type="email" name="email" value={formData.email} onChange={handleChange} required/>
           </div>
           <div className="label">
-            <label>Street Name: </label>
+            <label>Adress: </label>
             <input type="text" name="streetName" value={formData.streetName} onChange={handleChange} required />
           </div>
           <div className="label">
-            <label>Postal Code: </label>
+            <label>Postkod: </label>
             <input type="text" name="postalCode" value={formData.postalCode} onChange={handleChange} required />
           </div>
           <div className="label">
-            <label>City: </label>
+            <label>Stad: </label>
             <input type="text" name="city" value={formData.city} onChange={handleChange} required/>
           </div>
-          <button type="submit">Book Now</button>
+          <button type="submit">Boka Nu</button>
         </form>
       </div>
     </div>
