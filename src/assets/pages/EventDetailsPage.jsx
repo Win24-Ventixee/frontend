@@ -27,10 +27,10 @@ const EventDetailsPage = () => {
       <div className="">{event.eventDate} {event.location}</div>
       <div className="">{event.description}</div>
       <Link to ={`/events/booking/${id}`}>
-        Boka Evanemang
+        Boka Evenemang
       </Link>
       <Link to ={`/`}>
-        Evanemang
+        Evenemang
       </Link>
     </div>
   )
